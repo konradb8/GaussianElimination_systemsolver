@@ -88,7 +88,8 @@ void odwroc_vals_crout(double*& vals, int* wektor, int count) {
 		/*double pom = vals[i];
 		vals[i] = vals[wektor[i]];
 		vals[wektor[i]] = pom;*/
-		swap(vals[i], vals[wektor[i]]);
+		if(wektor[i] != 0)
+			swap(vals[i], vals[wektor[i]]);
 	}
 }
 int main() {
